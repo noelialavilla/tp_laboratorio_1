@@ -41,7 +41,7 @@ void inicioCalculadora()
             }
             else
             {
-                printf(" Primero debe ingresar el 1\247 operando! \n");
+                printf("\n  Primero debe ingresar el 1\247 operando! \n");
                 system("pause");
                 opcion = imprimirMenuPrincipal();
             }
@@ -67,7 +67,7 @@ void inicioCalculadora()
             }
             else
             {
-                printf(" No puede realizar las operaciones si aun no ha ingresado los dos numeros! \n Por favor, elija otra opcion.\n");
+                printf("\n  No puede realizar las operaciones si aun no ha ingresado los dos numeros! \n  Por favor, elija otra opcion.\n");
                 if (triggerPrimerOperando)
                 {
                     opcion = imprimirSubmenuPrimerOperando(primerOperando);
@@ -91,13 +91,13 @@ void inicioCalculadora()
                 }
                 else
                 {
-                    printf(" Para mostrar los resultados de las operaciones, primero debe realizarlas. (Opcion 3) \n");
+                    printf("\n  Para mostrar los resultados de las operaciones, primero debe realizarlas. (Opcion 3) \n");
                     opcion = imprimirSubmenuAmbosOperandos(primerOperando,segundoOperando);
                 }
             }
             else
             {
-                printf(" No pueden mostrar los resultados si aun no ha ingresado los dos numeros! \n Por favor, elija otra opcion.\n");
+                printf("\n  No pueden mostrar los resultados si aun no ha ingresado los dos numeros! \n  Por favor, elija otra opcion.\n");
                 system("pause");
                 opcion = imprimirMenuPrincipal();
             }
@@ -115,7 +115,7 @@ void inicioCalculadora()
             break;
 
         default:
-            printf(" Dato ingresado erroneo, por favor, elija una opcion valida. \n\n");
+            printf("\n Dato ingresado erroneo, por favor, elija una opcion valida. \n\n");
             if (triggerPrimerOperando)
             {
                 if (triggerSegundoOperando)
@@ -147,31 +147,31 @@ int imprimirMenuPrincipal()
     int opcion;
 
     system("cls");
-    printf(" __________________________________________________________ \n");
-    printf("|                                                          |\n");
-    printf("|                        Bienvenido!                       |\n");
-    printf("|__________________________________________________________|\n");
-    printf("|                                                          |\n");
-    printf("|                       CALCULADORA                        |\n");
-    printf("|__________________________________________________________|\n");
-    printf("|                                                          |\n");
-    printf("|     MENU DE OPCIONES                                     |\n");
-    printf("|                                                          |\n");
-    printf("| 1 - Ingreso de 1\247 operando.    A=X                       |\n");
-    printf("| 2 - Ingreso de 2\247 operando.    B=Y                       |\n");
-    printf("| 3 - Realizar operaciones matematicas:                    |\n");
-    printf("|                                                          |\n");
-    printf("|                 SUMA  --->  A+B                          |\n");
-    printf("|                RESTA  --->  A-B                          |\n");
-    printf("|       MULTIPLICACION  --->  A*B                          |\n");
-    printf("|             DIVISION  --->  A/B                          |\n");
-    printf("|            FACTORIAL  --->  A!|B!                        |\n");
-    printf("|                                                          |\n");
-    printf("| 4 - Mostrar resultados de las operaciones.               |\n");
-    printf("| 5 - Salir.                                               |\n");
-    printf("| 6 - Realizar un nuevo ingreso.                           |\n");
-    printf("|__________________________________________________________|\n");
-    printf("      Ingrese opcion deseada: ");
+    printf("  __________________________________________________________ \n");
+    printf(" |                                                          |\n");
+    printf(" |                       Bienvenido!                        |\n");
+    printf(" |__________________________________________________________|\n");
+    printf(" |                                                          |\n");
+    printf(" |                       CALCULADORA                        |\n");
+    printf(" |__________________________________________________________|\n");
+    printf(" |                                                          |\n");
+    printf(" |                    MENU DE OPCIONES                      |\n");
+    printf(" |                                                          |\n");
+    printf(" |          1 - Ingreso de 1\247 operando.    A=X              |\n");
+    printf(" |          2 - Ingreso de 2\247 operando.    B=Y              |\n");
+    printf(" |          3 - Realizar operaciones matematicas:           |\n");
+    printf(" |                                                          |\n");
+    printf(" |                      SUMA  --->  A+B                     |\n");
+    printf(" |                     RESTA  --->  A-B                     |\n");
+    printf(" |            MULTIPLICACION  --->  A*B                     |\n");
+    printf(" |                  DIVISION  --->  A/B                     |\n");
+    printf(" |                 FACTORIAL  --->  A!|B!                   |\n");
+    printf(" |                                                          |\n");
+    printf(" |          4 - Mostrar resultados de las operaciones.      |\n");
+    printf(" |          5 - Salir.                                      |\n");
+    printf(" |          6 - Realizar un nuevo ingreso.                  |\n");
+    printf(" |__________________________________________________________|\n");
+    printf("                Ingrese opcion deseada: ");
     fflush(stdin);
     scanf("%d", &opcion);
 
@@ -187,30 +187,30 @@ int imprimirSubmenuPrimerOperando(int primerOperando)
     system("pause");
     system("cls");
 
-    printf(" __________________________________________________________ \n");
-    printf("|                                                          |\n");
-    printf("|                       CALCULADORA                        |\n");
-    printf("|__________________________________________________________|\n");
-    printf("|                                                          |\n");
-    printf("      Primer operando:     A=%d                            \n",primerOperando);
-    printf("|__________________________________________________________|\n");
-    printf("|                                                          |\n");
-    printf("|     MENU DE OPCIONES                                     |\n");
-    printf("|                                                          |\n");
-    printf("| 2 - Ingreso de 2\247 operando.    B=Y                       |\n");
-    printf("| 3 - Realizar operaciones matematicas:                    |\n");
-    printf("|                                                          |\n");
-    printf("|                 SUMA  --->  A+B                          |\n");
-    printf("|                RESTA  --->  A-B                          |\n");
-    printf("|       MULTIPLICACION  --->  A*B                          |\n");
-    printf("|             DIVISION  --->  A/B                          |\n");
-    printf("|            FACTORIAL  --->  A!|B!                        |\n");
-    printf("|                                                          |\n");
-    printf("| 4 - Mostrar resultados de las operaciones.               |\n");
-    printf("| 5 - Salir.                                               |\n");
-    printf("| 6 - Realizar un nuevo ingreso.                           |\n");
-    printf("|__________________________________________________________|\n");
-    printf("      Ingrese opcion deseada: ");
+    printf("  __________________________________________________________ \n");
+    printf(" |                                                          |\n");
+    printf(" |                       CALCULADORA                        |\n");
+    printf(" |__________________________________________________________|\n");
+    printf(" |                                                          |\n");
+    printf("                Primer operando:     A=%d                    \n",primerOperando);
+    printf(" |__________________________________________________________|\n");
+    printf(" |                                                          |\n");
+    printf(" |                    MENU DE OPCIONES                      |\n");
+    printf(" |                                                          |\n");
+    printf(" |          2 - Ingreso de 2\247 operando.    B=Y              |\n");
+    printf(" |          3 - Realizar operaciones matematicas:           |\n");
+    printf(" |                                                          |\n");
+    printf(" |                      SUMA  --->  A+B                     |\n");
+    printf(" |                     RESTA  --->  A-B                     |\n");
+    printf(" |            MULTIPLICACION  --->  A*B                     |\n");
+    printf(" |                  DIVISION  --->  A/B                     |\n");
+    printf(" |                 FACTORIAL  --->  A!|B!                   |\n");
+    printf(" |                                                          |\n");
+    printf(" |          4 - Mostrar resultados de las operaciones.      |\n");
+    printf(" |          5 - Salir.                                      |\n");
+    printf(" |          6 - Realizar un nuevo ingreso.                  |\n");
+    printf(" |__________________________________________________________|\n");
+    printf("                Ingrese opcion deseada: ");
 
     fflush(stdin);
     scanf("%d", &opcion);
@@ -227,33 +227,32 @@ int imprimirSubmenuAmbosOperandos(int primerOperando, int segundoOperando)
     system("pause");
     system("cls");
 
-    printf(" __________________________________________________________ \n");
-    printf("|                                                          |\n");
-    printf("|                       CALCULADORA                        |\n");
-    printf("|__________________________________________________________|\n");
-    printf("|                                                          |\n");
-    printf("           A=%d                  B=%d                      \n",primerOperando,segundoOperando);
-    printf("|__________________________________________________________|\n");
-    printf("|                                                          |\n");
-    printf("|     MENU DE OPCIONES                                     |\n");
-    printf("|                                                          |\n");
-    printf("| 3 - Realizar operaciones matematicas:                    |\n");
-    printf("|                                                          |\n");
-    printf("|                 SUMA  --->  A+B                          |\n");
-    printf("|                RESTA  --->  A-B                          |\n");
-    printf("|       MULTIPLICACION  --->  A*B                          |\n");
-    printf("|             DIVISION  --->  A/B                          |\n");
-    printf("|            FACTORIAL  --->  A!|B!                        |\n");
-    printf("|                                                          |\n");
-    printf("| 4 - Mostrar resultados de las operaciones.               |\n");
-    printf("| 5 - Salir.                                               |\n");
-    printf("| 6 - Realizar un nuevo ingreso.                           |\n");
-    printf("|__________________________________________________________|\n");
-    printf("      Ingrese opcion deseada: ");
+    printf("  __________________________________________________________ \n");
+    printf(" |                                                          |\n");
+    printf(" |                       CALCULADORA                        |\n");
+    printf(" |__________________________________________________________|\n");
+    printf(" |                                                          |\n");
+    printf("                A=%d                  B=%d                   \n",primerOperando,segundoOperando);
+    printf(" |__________________________________________________________|\n");
+    printf(" |                                                          |\n");
+    printf(" |                    MENU DE OPCIONES                      |\n");
+    printf(" |                                                          |\n");
+    printf(" |          3 - Realizar operaciones matematicas:           |\n");
+    printf(" |                                                          |\n");
+    printf(" |                      SUMA  --->  A+B                     |\n");
+    printf(" |                     RESTA  --->  A-B                     |\n");
+    printf(" |            MULTIPLICACION  --->  A*B                     |\n");
+    printf(" |                  DIVISION  --->  A/B                     |\n");
+    printf(" |                 FACTORIAL  --->  A!|B!                   |\n");
+    printf(" |                                                          |\n");
+    printf(" |          4 - Mostrar resultados de las operaciones.      |\n");
+    printf(" |          5 - Salir.                                      |\n");
+    printf(" |          6 - Realizar un nuevo ingreso.                  |\n");
+    printf(" |__________________________________________________________|\n");
+    printf("                Ingrese opcion deseada: ");
 
     fflush(stdin);
     scanf("%d", &opcion);
-
 
     return opcion;
 
@@ -264,12 +263,12 @@ int ingresarOperando()
 {
     char operando[9];
     fflush(stdin);
-    printf("      Ingrese operando: ");
+    printf("                Ingrese operando: ");
     scanf("%s",operando);
 
     while (esNumerico(operando)!=1)
     {
-        printf("      Error. El dato ingresado es incorrecto.\n      Por favor, ingrese un numero: ");
+        printf("            Error. El dato ingresado es incorrecto.\n                Por favor, ingrese un numero: ");
         scanf("%s",operando);
     }
 
@@ -297,18 +296,18 @@ void mostrarResultados(int a, int b, int resSuma, int resResta, float resDiv,int
     printf("------------------------------------------------------------\n");
     printf("|                       RESULTADOS                         |\n");
     printf("------------------------------------------------------------\n");
-    printf(" El resultado de %d + %d es %d\n",a,b,resSuma);
-    printf(" El resultado de %d - %d es %d\n",a,b,resResta);
+    printf("  El resultado de %d + %d es %d\n",a,b,resSuma);
+    printf("  El resultado de %d - %d es %d\n",a,b,resResta);
 
     if (resDiv == 0)
     {
-        printf(" La division entre %d y %d no se realizo ya que no es posible dividir por cero.\n",a,b);
+        printf("  La division entre %d y %d no se realizo ya que no es posible dividir por cero.\n",a,b);
     }
     else
     {
-        printf(" El resultado de %d / %d es %.2f \n",a,b,resDiv);
+        printf("  El resultado de %d / %d es %.2f \n",a,b,resDiv);
     }
-    printf(" El resultado de %d * %d es %d \n",a,b,resMultiplicacion);
+    printf("  El resultado de %d * %d es %d \n",a,b,resMultiplicacion);
     mostrarResultadosFactoreo(a,resFactorialA);
     mostrarResultadosFactoreo(b,resFactorialB);
 
@@ -323,14 +322,14 @@ void mostrarResultadosFactoreo(int numero, int factorial)
     switch(factorial)
     {
     case 0:
-        printf(" No se pudo realizar el factorial del numero ingresado (%d) \n ya que se trata de un numero negativo. \n",numero);
+        printf("  No se pudo realizar el factorial del numero ingresado (%d) \n  ya que se trata de un numero negativo. \n",numero);
         break;
     case -1:
-        printf(" No se puede mostrar el factorial de %d ya que su longitud \n es mayor a la que se puede mostrar en esta calculadora.\n",numero);
-        printf(" Esta calculadora solo puede mostrar el factorial de \n numeros menores a 13.\n\n");
+        printf("  No se puede mostrar el factorial de %d ya que su longitud \n  es mayor a la que se puede mostrar en esta calculadora.\n",numero);
+        printf("  Esta calculadora solo puede mostrar el factorial de \n  numeros menores a 13.\n\n");
         break;
     default:
-        printf(" El factorial de %d es: %d. \n",numero,factorial);
+        printf("  El factorial de %d es: %d. \n",numero,factorial);
         break;
     }
 
