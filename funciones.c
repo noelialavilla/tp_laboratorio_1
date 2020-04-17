@@ -266,7 +266,7 @@ int ingresarOperando()
     printf("                Ingrese operando: ");
     scanf("%s",operando);
 
-    while (esNumerico(operando)!=1)
+    while (esNumerico(operando)!=1 || strlen(operando)>9)
     {
         printf("            Error. El dato ingresado es incorrecto.\n                Por favor, ingrese un numero: ");
         scanf("%s",operando);
