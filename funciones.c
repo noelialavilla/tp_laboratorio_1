@@ -162,10 +162,10 @@ int imprimirMenuPrincipal()
     printf("| 3 - Realizar operaciones matematicas:                    |\n");
     printf("|                                                          |\n");
     printf("|                 SUMA  --->  A+B                          |\n");
-    printf("|                RESTA  --->  A+B                          |\n");
+    printf("|                RESTA  --->  A-B                          |\n");
     printf("|       MULTIPLICACION  --->  A*B                          |\n");
     printf("|             DIVISION  --->  A/B                          |\n");
-    printf("|            FACTORIAL  --->  A!/B!                        |\n");
+    printf("|            FACTORIAL  --->  A!|B!                        |\n");
     printf("|                                                          |\n");
     printf("| 4 - Mostrar resultados de las operaciones.               |\n");
     printf("| 5 - Salir.                                               |\n");
@@ -201,10 +201,10 @@ int imprimirSubmenuPrimerOperando(int primerOperando)
     printf("| 3 - Realizar operaciones matematicas:                    |\n");
     printf("|                                                          |\n");
     printf("|                 SUMA  --->  A+B                          |\n");
-    printf("|                RESTA  --->  A+B                          |\n");
+    printf("|                RESTA  --->  A-B                          |\n");
     printf("|       MULTIPLICACION  --->  A*B                          |\n");
     printf("|             DIVISION  --->  A/B                          |\n");
-    printf("|            FACTORIAL  --->  A!/B!                        |\n");
+    printf("|            FACTORIAL  --->  A!|B!                        |\n");
     printf("|                                                          |\n");
     printf("| 4 - Mostrar resultados de las operaciones.               |\n");
     printf("| 5 - Salir.                                               |\n");
@@ -240,10 +240,10 @@ int imprimirSubmenuAmbosOperandos(int primerOperando, int segundoOperando)
     printf("| 3 - Realizar operaciones matematicas:                    |\n");
     printf("|                                                          |\n");
     printf("|                 SUMA  --->  A+B                          |\n");
-    printf("|                RESTA  --->  A+B                          |\n");
+    printf("|                RESTA  --->  A-B                          |\n");
     printf("|       MULTIPLICACION  --->  A*B                          |\n");
     printf("|             DIVISION  --->  A/B                          |\n");
-    printf("|            FACTORIAL  --->  A!/B!                        |\n");
+    printf("|            FACTORIAL  --->  A!|B!                        |\n");
     printf("|                                                          |\n");
     printf("| 4 - Mostrar resultados de las operaciones.               |\n");
     printf("| 5 - Salir.                                               |\n");
