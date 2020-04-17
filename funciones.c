@@ -279,14 +279,16 @@ int ingresarOperando()
 // Valida que el dato ingresado sea un número
 int esNumerico(char dato[])
 {
+    int esNum=1;
     for (int i=0; i<strlen(dato); i++)
     {
         if(isdigit(dato[i])!=1 && dato[i]!='-' && dato[i]!='+')
         {
-            return 0;
+            esNum = 0;
+            break;
         }
     }
-    return 1;
+    return esNum;
 
 }
 //*******************************************************************************/
