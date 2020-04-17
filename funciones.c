@@ -8,14 +8,14 @@
 void inicioCalculadora()
 {
     int opcion;
-    int primerOperando=0;
-    int segundoOperando=0;
-    int resSuma =0;
-    int resResta =0;
-    float resDiv =0;
-    int resMultiplicacion =0;
-    int resFactorialX =0;
-    int resFactorialY =0;
+    int primerOperando;
+    int segundoOperando;
+    int resSuma;
+    int resResta;
+    float resDiv;
+    int resMultiplicacion;
+    int resFactorialX;
+    int resFactorialY;
 
     int triggerPrimerOperando =0;
     int triggerSegundoOperando =0;
@@ -41,7 +41,7 @@ void inicioCalculadora()
             }
             else
             {
-                printf("Primero debe ingresar el 1\247 operando! \n");
+                printf(" Primero debe ingresar el 1\247 operando! \n");
                 system("pause");
                 opcion = imprimirMenuPrincipal();
             }
@@ -60,14 +60,14 @@ void inicioCalculadora()
                 resFactorialY = factorial(segundoOperando);
                 triggerOperacionesRealizadas = 1;
                 Sleep(1000);
-                printf("Realizando operaciones...\n\n");
+                printf(" Realizando operaciones...\n\n");
                 Sleep(1500);
-                printf("Operaciones realizadas con exito! \n");
+                printf(" Operaciones realizadas con exito! \n");
                 opcion = imprimirSubmenuAmbosOperandos(primerOperando,segundoOperando);
             }
             else
             {
-                printf("No puede realizar las operaciones si aun no ha ingresado los dos numeros! \nPor favor, elija otra opcion.\n");
+                printf(" No puede realizar las operaciones si aun no ha ingresado los dos numeros! \n Por favor, elija otra opcion.\n");
                 if (triggerPrimerOperando)
                 {
                     opcion = imprimirSubmenuPrimerOperando(primerOperando);
@@ -91,13 +91,13 @@ void inicioCalculadora()
                 }
                 else
                 {
-                    printf("Para mostrar los resultados de las operaciones, primero debe realizarlas. (Opcion 3) \n");
+                    printf(" Para mostrar los resultados de las operaciones, primero debe realizarlas. (Opcion 3) \n");
                     opcion = imprimirSubmenuAmbosOperandos(primerOperando,segundoOperando);
                 }
             }
             else
             {
-                printf("No puede realizar las operaciones si aun no ha ingresado los dos numeros! \nPor favor, elija otra opcion.\n");
+                printf(" No pueden mostrar los resultados si aun no ha ingresado los dos numeros! \n Por favor, elija otra opcion.\n");
                 system("pause");
                 opcion = imprimirMenuPrincipal();
             }
@@ -115,7 +115,7 @@ void inicioCalculadora()
             break;
 
         default:
-            printf("Dato ingresado erroneo, por favor, elija una opcion valida. \n\n");
+            printf(" Dato ingresado erroneo, por favor, elija una opcion valida. \n\n");
             if (triggerPrimerOperando)
             {
                 if (triggerSegundoOperando)
@@ -171,6 +171,7 @@ int imprimirMenuPrincipal()
     printf("| 5 - Salir.                                               |\n");
     printf("| 6 - Realizar un nuevo ingreso.                           |\n");
     printf("|__________________________________________________________|\n");
+    printf("      Ingrese opcion deseada: ");
     fflush(stdin);
     scanf("%d", &opcion);
 
@@ -191,7 +192,7 @@ int imprimirSubmenuPrimerOperando(int primerOperando)
     printf("|                       CALCULADORA                        |\n");
     printf("|__________________________________________________________|\n");
     printf("|                                                          |\n");
-    printf("|     Primer operando:     A=%d                            |\n",primerOperando);
+    printf("      Primer operando:     A=%d                            \n",primerOperando);
     printf("|__________________________________________________________|\n");
     printf("|                                                          |\n");
     printf("|     MENU DE OPCIONES                                     |\n");
@@ -209,6 +210,7 @@ int imprimirSubmenuPrimerOperando(int primerOperando)
     printf("| 5 - Salir.                                               |\n");
     printf("| 6 - Realizar un nuevo ingreso.                           |\n");
     printf("|__________________________________________________________|\n");
+    printf("      Ingrese opcion deseada: ");
 
     fflush(stdin);
     scanf("%d", &opcion);
@@ -230,7 +232,7 @@ int imprimirSubmenuAmbosOperandos(int primerOperando, int segundoOperando)
     printf("|                       CALCULADORA                        |\n");
     printf("|__________________________________________________________|\n");
     printf("|                                                          |\n");
-    printf("|          A=%d                  B=%d                      |\n",primerOperando,segundoOperando);
+    printf("           A=%d                  B=%d                      \n",primerOperando,segundoOperando);
     printf("|__________________________________________________________|\n");
     printf("|                                                          |\n");
     printf("|     MENU DE OPCIONES                                     |\n");
@@ -247,6 +249,7 @@ int imprimirSubmenuAmbosOperandos(int primerOperando, int segundoOperando)
     printf("| 5 - Salir.                                               |\n");
     printf("| 6 - Realizar un nuevo ingreso.                           |\n");
     printf("|__________________________________________________________|\n");
+    printf("      Ingrese opcion deseada: ");
 
     fflush(stdin);
     scanf("%d", &opcion);
@@ -259,15 +262,16 @@ int imprimirSubmenuAmbosOperandos(int primerOperando, int segundoOperando)
 // Ingreso de operandos
 int ingresarOperando()
 {
-    char operando[5];
+    char operando[9];
+    fflush(stdin);
+    printf("      Ingrese operando: ");
+    scanf("%s",operando);
 
-    do
+    while (esNumerico(operando)!=1)
     {
-        fflush(stdin);
-        printf("Ingrese operando: ");
+        printf("      Error. El dato ingresado es incorrecto.\n      Por favor, ingrese un numero: ");
         scanf("%s",operando);
     }
-    while (esNumerico(operando)!=1);
 
     return atoi(operando);
 }

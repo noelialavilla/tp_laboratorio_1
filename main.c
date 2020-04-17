@@ -6,6 +6,7 @@
 
 int main()
 {
+    system("color F5");
     inicioCalculadora();
 
     return 0;
