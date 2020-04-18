@@ -4,6 +4,7 @@
 #include <string.h>
 #include <windows.h>
 #include "funciones.h"
+#include <string.h>
 
 void inicioCalculadora()
 {
