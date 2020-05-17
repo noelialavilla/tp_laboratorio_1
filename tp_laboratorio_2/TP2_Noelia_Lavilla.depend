@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1589421409 source:d:\laboratorio programación i\tp_laboratorio_1\tp_laboratorio_2\main.c
+	<stdio.h>
+	<stdlib.h>
+	"utn.h"
+	"ArrayEmployees.h"
+
+1589729098 d:\laboratorio programación i\tp_laboratorio_1\tp_laboratorio_2\utn.h
+
+1589422592 d:\laboratorio programación i\tp_laboratorio_1\tp_laboratorio_2\arrayemployees.h
+
+1589729090 source:d:\laboratorio programación i\tp_laboratorio_1\tp_laboratorio_2\utn.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"utn.h"
+

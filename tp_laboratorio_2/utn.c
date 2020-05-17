@@ -20,7 +20,7 @@ int strnlen(const char *s, size_t maxlen)
 int utn_getNumeroFlotante(float* pResultado, char* mensaje, char* mensajeError, float minimo, float maximo, int reintentos)
 {
     float bufferFloat;
-    int retorno = -1;
+    int retorno = 0;
     while(reintentos>=0)
     {
         reintentos--;

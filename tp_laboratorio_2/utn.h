@@ -13,7 +13,7 @@ int utn_getNumeroFlotante(float* pResultado, char* mensaje, char* mensajeError, 
  * \param mensajeError Es el mensaje de Error a ser mostrado
  * \param minimo Es el numero maximo a ser aceptado
  * \param maximo Es el minimo minimo a ser aceptado
- * \return Retorna 1 si se obtuvo el numero y -1 si no
+ * \return Retorna 1 si se obtuvo el numero y 0 si no
  *
  */
 

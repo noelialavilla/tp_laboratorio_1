@@ -392,7 +392,7 @@ int askForEmployeeData(Employee* list, int len, int id)
         int salaryOk = utn_getNumeroFlotante(&auxEmployee.salary, "Salary: ", "The salary value must be a number between 1 and 400000. \n", 1.00, 4000000.00, 3);
         int sectorOk = utn_getNumero(&auxEmployee.sector, "Sector: ", "The sector value must be a number between 1 and 10.\n", 1, 10, 3);
 
-        if(nameOk && lastNameOk && salaryOk  && sectorOk )
+        if(nameOk ==1 && lastNameOk ==1 && salaryOk==1  && sectorOk==1 )
         {
             auxEmployee.id = id;
             auxEmployee.isEmpty = FALSE;
