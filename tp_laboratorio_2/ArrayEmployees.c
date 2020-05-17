@@ -34,7 +34,7 @@ int menu()
 int validateEmptyArray(Employee* list, int len)
 {
     int isEmpty = TRUE;
-    if(validateLengthAndNullPointer(list, len))
+    if(validateLengthAndNullPointer(list, len)== TRUE)
     {
         for(int index = 0; index < len; index++)
         {
@@ -85,7 +85,7 @@ int modifyEmployee(Employee* list, int len)
             {
             case 1:
                 newNameOk = utn_getNombre(auxEmployee.name, 51,"Enter new name: ", "The name can only contain letters and must have less than 50.\n",  3);
-                if (newNameOk)
+                if (newNameOk == 1)
                 {
                     strcpy(list[index].name, auxEmployee.name);
                     modificationOk(list, index);
@@ -94,7 +94,7 @@ int modifyEmployee(Employee* list, int len)
                 break;
             case 2:
                 newLastNameOk = utn_getNombre(auxEmployee.lastName, 51, "Enter new last Name: ", "The last name can only contain letters and must have less than 50. \n",  3);
-                if (newLastNameOk)
+                if (newLastNameOk == 1)
                 {
                     strcpy(list[index].lastName, auxEmployee.lastName);
                     modificationOk(list, index);
@@ -103,7 +103,7 @@ int modifyEmployee(Employee* list, int len)
                 break;
             case 3:
                 newSalaryOk = utn_getNumeroFlotante(&auxEmployee.salary, "Salary: ", "The salary value must be a number between 1 and 400000. \n", 1.00, 4000000.00, 3);
-                if (newSalaryOk)
+                if (newSalaryOk ==1)
                 {
                     list[index].salary = auxEmployee.salary;
                     modificationOk(list, index);
@@ -112,7 +112,7 @@ int modifyEmployee(Employee* list, int len)
                 break;
             case 4:
                 newSectorOk = utn_getNumero(&auxEmployee.sector, "Sector: ", "The sector value must be a number between 1 and 10.\n", 1, 10, 3);
-                if(newSectorOk)
+                if(newSectorOk == 1)
                 {
                     list[index].sector = auxEmployee.sector;
                     modificationOk(list, index);
@@ -344,7 +344,7 @@ int printEmployees(Employee* list, int length)
 int findFreeIndex(Employee* list, int len)
 {
     int freeIndex = -1;
-    if(validateLengthAndNullPointer(list, len))
+    if(validateLengthAndNullPointer(list, len) == 1 )
     {
         for (int index =0 ; index <  len; index++)
         {
@@ -382,7 +382,7 @@ int askForEmployeeData(Employee* list, int len, int id)
     system("cls");
     printf("**** Add new employee menu **** \n\n");
     int dataReceived = NOTOK;
-    if( validateLengthAndNullPointer(list,len))
+    if( validateLengthAndNullPointer(list,len)== 1)
     {
         int addedOk = NOTOK;
         Employee auxEmployee;

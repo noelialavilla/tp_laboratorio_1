@@ -28,14 +28,14 @@ int main()
         do
         {
 
-            if(validateEmptyArray(list, EMPQTY))
+            if(validateEmptyArray(list, EMPQTY) == TRUE)
             {
                 emptyList = TRUE;
             }
             switch(menu())
             {
             case 1:
-                if (askForEmployeeData(list, EMPQTY, nextId ))
+                if (askForEmployeeData(list, EMPQTY, nextId )== TRUE)
                 {
                     nextId++;
                     emptyList = FALSE;
@@ -72,7 +72,7 @@ int main()
 
                 break;
             case 4:
-                if (emptyList)
+                if (emptyList == TRUE)
                 {
                     printf("The system is empty. You have to register at least one employee in order to generate the reports. \n");
                 }
